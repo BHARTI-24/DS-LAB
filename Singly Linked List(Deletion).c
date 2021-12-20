@@ -109,6 +109,22 @@ void display()
     }
 }
 
+void delete_begin()
+{
+    struct node *ptr;
+    if (ptr == NULL)
+    {
+        printf("\nList is Empty:\n");
+        return;
+    }
+    else
+    {
+        ptr = start;
+        start = start->next;
+        printf("\nThe deleted element is :%d\t", ptr->info);
+        free(ptr);
+    }
+}
 void delete_end()
 {
     struct node *temp, *ptr;
